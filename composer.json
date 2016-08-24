@@ -25,6 +25,7 @@
             "database/"
         ]
     },
+
     "config" : {
         "vendor-dir" : "_vendor"
     }
