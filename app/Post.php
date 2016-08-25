@@ -5,9 +5,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model {
 
-	protected $fillable = ["name", "title", "body"];
+	protected $fillable = ["user_id", "title", "body"];
 
-	protected $dates = [];
+	protected $dates = ["published_at"];
 
 	public static $rules = [
 		// Validation rules

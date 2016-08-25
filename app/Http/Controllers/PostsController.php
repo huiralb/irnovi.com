@@ -7,4 +7,9 @@ class PostsController extends Controller {
 
 	use RESTActions;
 
+	public function index()
+	{
+		return view('posts.index')->with('posts' , $this->all());
+	}
+
 }
