@@ -13,6 +13,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        // WebNeat command generator
+        if ($this->app->environment() == 'local') {
+            $this->app->register('Wn\Generators\CommandsServiceProvider');
+        }
     }
 }
