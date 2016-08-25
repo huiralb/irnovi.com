@@ -11,6 +11,14 @@
 |
 */
 
-$app->get('/', function () use ($app) {
-    return 'Under Construction';
-});
+$app->get('/', 'PostsController@all');
+
+
+/**
+ * Routes for resource posts
+ */
+$app->get('posts', 'PostsController@all');
+$app->get('posts/{id}', 'PostsController@get');
+$app->post('posts', 'PostsController@add');
+$app->put('posts/{id}', 'PostsController@put');
+$app->delete('posts/{id}', 'PostsController@remove');
